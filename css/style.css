@@ -1,0 +1,130 @@
+.profile-image {
+    width: 39px;
+    margin-right: 10px;
+}
+
+.logo {
+    width: 65px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.card-action a:hover {
+    cursor: pointer;
+}
+
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=search-md]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #388e3c;
+    box-shadow: 0 1px 0 0 #388e3c;
+}
+
+input[type=text]:focus:not([readonly])+label {
+    color: #388e3c;
+}
+
+input[type=password]:focus:not([readonly])+label {
+    color: #388e3c;
+}
+
+.btn-default {
+    background: #388e3c;
+}
+
+.btn-default:hover {
+    background: #4caf50 !important;
+}
+
+#lbl::after {
+    border-color: #388e3c;
+    background-color: #388e3c;
+}
+
+.dropdown-button {
+    display: flex;
+    height: 61px;
+    justify-content: space-between;
+    align-items: center;
+    width: 132px;
+}
+
+nav {
+    /* padding: 0 15px; */
+    background: #3D8C44;
+}
+
+#dropdown1 {
+    margin-top: 60px;
+}
+
+.main {
+    height: 89vh;
+}
+
+.main video {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: 100%; 
+    height: 100%;
+    z-index: -1000; 
+    overflow: hidden;
+    /* opacity: 0.5; */
+    object-fit: fill;
+}
+
+.main {
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    position: absolute;
+    font-size: 35px;
+    font-style: italic;
+    top: 50%;
+    color: white;
+    font-weight: bold;
+    margin: 0 50px;
+}
+
+.next {
+    margin: 40px 0;
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.search div {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.right li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    margin-top: 50px;
+    padding: 30px;
+}

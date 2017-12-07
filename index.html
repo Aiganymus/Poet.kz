@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+    <div class="carousel carousel-slider center slides" style="height:100vh!important" data-indicators="true">
+        <div class="carousel-fixed-item center">
+            <a class="btn waves-effect white grey-text darken-text-2 modal-trigger hoverable" href="login.html">Join us now</a>
+        </div>
+        <div class="carousel-item white-text" style="background-image:url('img/carousel3.jpg')" href="#one!">
+            <h2>“A poem begins as a lump in the throat, a sense of wrong, a homesickness, a lovesickness.” </h2>
+            <p class="white-text">― Robert Frost</p>             
+        </div>
+        <div class="carousel-item white-text" style="background-image:url('img/carousel2.jpg')" href="#two!">
+            <h2>“You talk when you cease to be at peace with your thoughts.”</h2>
+            <p class="white-text">― Kahlil Gibran</p>   
+        </div>
+        <div class="carousel-item white-text" style="background-image:url('img/carousel1.jpg')" href="#three!"> 
+            <h2>“Only the very weak-minded refuse to be influenced by literature and poetry.” </h2>
+            <p class="white-text">― Cassandra Clare</p> 
+        </div>
+        <div class="carousel-item white-text" style="background-image:url('img/carousel4.jpg')" href="#four!">
+            <h2>“Poets have been mysteriously silent on the subject of cheese.”</h2>
+            <p class="white-text">― G.K. Chesterton</p>   
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script>
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+        $('.carousel.carousel-slider').height('100vh');
+        autoplay()   
+        function autoplay() {
+            $('.carousel').carousel('next');
+            setTimeout(autoplay, 4500);
+        }
+    </script>
+    <style>
+        .carousel-item {
+            background-size: cover;
+        } 
+    </style>
+</body>
+</html>

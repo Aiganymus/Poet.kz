@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (sessionStorage.getItem("username") == null)
+            window.location.replace('http://127.0.0.1:5500/login.html');
+    </script>
+</head>
+
+<body>
+    <ul id="dropdown1" class="dropdown-content">
+        <li>
+            <a href="add.html">Add poem</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="profile.html">Settings</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a onclick="logout()" href="#!">Log out</a>
+        </li>
+    </ul>
+    <nav>
+        <div class="nav-wrapper green darken-2">
+            <img src="./img/logo2.png" class="logo" alt="logo">
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="main.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a class="dropdown-button" href="#!" data-activates="dropdown1">
+                        <img src="img/picture.jpg" class="profile-image circle" alt="profile image" srcset="">
+                        <span class="profile-username"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container hoverable" data-anijs="if: load, on: window, do: rollIn animated">
+        <div class="row">
+            <div class="col s3">
+                <img src="./img/picture.jpg" alt="" class="setimg" style="width:100%">
+            </div>
+            <div class="col s8 offset-s1">
+                <table class="highlight">
+                    <thead>
+                        <tr>
+                            <th>Profile settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Username</td>
+                            <td id="username"></td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>Almaty</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>test@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>
+                                <input class="validate" type="password" id="pass" placeholder="Type new password">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-default" onclick="savePass()" style="display:flex;margin:0 auto;">Save changes</button>
+            </div>
+        </div>
+    </div>
+    <div class="container hoverable" style="margin-bottom:50px;">
+        <h3>My poems</h3>
+        <div class="row" id="myPosts"></div>
+    </div>
+    <footer class="page-footer green darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Contact us</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12 text-white">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix" style="color:white!important">First Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="icon_telephone" type="tel" class="validate">
+                        <label for="icon_telephone" style="color:white!important">Telephone</label>
+                    </div>
+                    <button style="display:flex;margin-left:30px" class="btn btn-warning">Leave contacts</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container" style="padding:0;margin-top:0">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script src="./anijs-master/src/anijs.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+        $('#username').html(sessionStorage.getItem("username"));
+    </script>
+</body>
+
+</html>
